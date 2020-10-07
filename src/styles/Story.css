@@ -1,0 +1,37 @@
+.story{
+    width: 120px;
+    height: 200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    box-shadow: 0px 5px 17px -7px #000;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: transform .1ms ease-in;
+}
+.story:hover{
+    transform:scale(1.07);
+}
+.story:hover .story__layer{
+    background-color: rgba(0, 0, 0, .15);
+}
+.story__layer{
+    width: 120px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    transition: transform .1ms ease-in;
+}
+.story__avatar{
+    position: absolute;
+    top: -100%;
+    margin: 10px;
+    border: 5px solid rgb(63, 131, 233);
+}
+.story>h4{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
