@@ -7,11 +7,13 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 //style
 import '../styles/SideBar.css';
+//reducer
+import { useStateValue } from '../StateProvider';
 function SideBar() {
-    const urlHC = '../icons/bell.png';
+    const [{ user }, dispatch] = useStateValue();
     return (
         <div className="sidebar">
-            <SideBarRow src={urlHC} tittle="Java" />
+            <SideBarRow src={user.photoURL} tittle={user.displayName} />
             <SideBarRow Icon={PeopleIcon} tittle="Bạn bè" />
             <SideBarRow Icon={GroupWorkRoundedIcon} tittle="Nhóm" />
             <SideBarRow Icon={StoreMallDirectoryRoundedIcon} tittle="Market Place" />

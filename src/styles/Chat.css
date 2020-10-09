@@ -1,0 +1,31 @@
+.chat{
+    width: 340px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 300px;
+    border-top: 1px solid rgb(209, 198, 198);
+    position: fixed;
+    box-sizing: border-box;
+}
+.chat__top{
+    display: flex;
+    align-items: center;
+    color: grey;
+    font-weight: medium;
+}
+.chat__options {
+    margin-left: 87px;
+    display: flex;
+    justify-content: space-between;
+}
+.chat__option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2px 5px;
+    transition: .15s ease-in;
+}
+.chat__option:hover{
+    background-color: rgb(173, 168, 168);
+    border-radius: 5px;
+}

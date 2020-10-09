@@ -10,7 +10,7 @@
     box-shadow: 0px 5px 8px -9px #000;
 }
 .header__left{
-    width: 25vw;
+    width: 20vw;
     display: flex;
 }
 .header__left > img{
@@ -33,6 +33,7 @@
     outline-width: 0;
 }
 .header__center{
+    width: 40vw;
     display: flex;
     flex: 1;
     justify-content: space-evenly;
@@ -52,14 +53,13 @@
 .header__option{
     display: flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 26px;
     cursor: pointer;
 }
 .header__option:hover{
     background-color: #eff2f5;
     border-radius: 10px;
     align-items: center;
-    padding: 0 30px;
     border-bottom: none;
 }
 .header__info{

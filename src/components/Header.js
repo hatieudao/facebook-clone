@@ -13,15 +13,20 @@ import IconButton from '@material-ui/core/IconButton';
 import ForumIcon from '@material-ui/icons/Forum';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { Avatar } from '@material-ui/core';
 //---style
 import '../styles/Header.css';
+//reducer
+import { useStateValue } from '../StateProvider';
 
 
 function Header() {
+    const [{ user }, dispatch] = useStateValue();
+    const name = user.displayName.split(' ')[0];
     return (
         <div className="header">
             <div className="header__left">
-                <img src={Logo} alt="fb-icon" />
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="fb-icon" />
                 <div className="header__input">
                     <SearchIcon className="search-icon" />
                     <input type="text" placeholder="Tìm kiếm trên Facebook" />
@@ -35,8 +40,8 @@ function Header() {
             </div>
             <div className="header__right">
                 <div className="header__info">
-                    <AccountCircleIcon />
-                    <h4 className="Name">Java</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4 className="Name">{name}</h4>
                 </div>
                 <div className="header__community">
                     <IconButton>
